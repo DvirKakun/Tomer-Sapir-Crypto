@@ -47,7 +47,7 @@ export function Header() {
             {/* Logo container with fixed size */}
             <div className="w-14 h-14 flex items-center justify-center overflow-visible">
               <img
-                src="public/images/logo.png"
+                src="/images/logo.png"
                 alt="Company logo"
                 className="w-14 h-14 object-contain scale-150 transition-transform group-hover:scale-[1.6]"
               />
