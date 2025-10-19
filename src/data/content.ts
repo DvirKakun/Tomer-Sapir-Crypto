@@ -206,7 +206,7 @@ export const aboutContent = {
     "אסטרטגיית תיקים",
     "עמידה ברגולציה",
   ],
-  image: "/src/assets/tomer-sapir-8.jpg",
+  image: "/public/images/tomer-sapir-8.jpg",
 };
 
 export const contactInfo: ContactInfo = {
