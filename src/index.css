@@ -1,17 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
+    --background: 0 0% 6%; /* Dark background */
+    --foreground: 0 0% 98%;
+    --card: 0 0% 10%; /* Darker cards */
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 24 95% 53%; /* Orange-gold primary */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 16%; /* Dark secondary */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 16%;
+    --muted-foreground: 0 0% 64%;
+    --accent: 24 95% 53%; /* Orange accent */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 20%; /* Darker borders */
+    --input: 0 0% 20%;
+    --ring: 24 95% 53%;
     --radius: 0.5rem;
   }
 
   * {
-    @apply border-gray-200;
+    font-family: "Heebo", sans-serif;
   }
+}
 
-  body {
-    @apply bg-white text-gray-900;
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
