@@ -118,12 +118,16 @@ export function Hero() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Image Slider - Now on right for RTL */}
-          <div className="hidden lg:block relative lg:order-1">
-            <ImageSlider images={heroImages} autoPlayInterval={2500} />
+          {/* Image Slider - Visible on all devices */}
+          <div className="relative lg:order-1 mb-8 lg:mb-0">
+            <ImageSlider
+              images={heroImages}
+              autoPlayInterval={2500}
+              className="mobile-slider" // Add this for mobile-specific styling
+            />
 
-            {/* Floating stats card - RTL positioning with dark theme */}
-            <div className="absolute -bottom-6 -right-6 bg-crypto-dark-lighter/95 backdrop-blur-md border border-crypto-gold/30 rounded-xl p-6 shadow-xl shadow-crypto-gold/20 max-w-xs z-10">
+            {/* Floating stats card - Hidden on mobile, shown on desktop */}
+            <div className="hidden lg:block absolute -bottom-6 -right-6 bg-crypto-dark-lighter/95 backdrop-blur-md border border-crypto-gold/30 rounded-xl p-6 shadow-xl shadow-crypto-gold/20 max-w-xs z-10">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-crypto-gold/20 rounded-lg flex items-center justify-center">
                   <TrendingUp className="w-6 h-6 text-crypto-gold" />

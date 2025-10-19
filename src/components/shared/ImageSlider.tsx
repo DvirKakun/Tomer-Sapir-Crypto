@@ -51,7 +51,8 @@ export function ImageSlider({
     >
       {/* Images */}
       <div className="relative overflow-hidden rounded-2xl shadow-2xl border border-white/10">
-        <div className="relative h-[600px]">
+        <div className="relative h-[400px] sm:h-[500px] lg:h-[600px]">
+          {/* ↑ Responsive heights: 400px mobile, 500px tablet, 600px desktop */}
           {images.map((image, index) => (
             <div
               key={index}
@@ -71,21 +72,21 @@ export function ImageSlider({
         </div>
       </div>
 
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows - Visible on mobile too */}
       <button
         onClick={goToPrevious}
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-white/30"
+        className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white opacity-70 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 hover:bg-white/30"
         aria-label="תמונה קודמת"
       >
-        <ChevronRight className="w-6 h-6" />
+        <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>
 
       <button
         onClick={goToNext}
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-white/30"
+        className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white opacity-70 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 hover:bg-white/30"
         aria-label="תמונה הבאה"
       >
-        <ChevronLeft className="w-6 h-6" />
+        <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>
 
       {/* Dots Navigation */}
