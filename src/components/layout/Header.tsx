@@ -53,7 +53,7 @@ export function Header() {
               />
             </div>
 
-            <div className="hidden sm:block">
+            <div className="block">
               <div
                 className={cn(
                   "font-bold text-lg transition-colors",
